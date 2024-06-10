@@ -1,0 +1,20 @@
+job: (g=0): rw=read, bs=(R) 512KiB-512KiB, (W) 512KiB-512KiB, (T) 512KiB-512KiB, ioengine=libaio, iodepth=1
+fio-3.35
+Starting 1 process
+job: Laying out IO file (1 file / 10240MiB)
+fio: ENOSPC on laying out file, stopping
+fio: pid=91606, err=28/file:filesetup.c:240, func=write, error=No space left on device
+
+
+Run status group 0 (all jobs):
+
+Disk stats (read/write):
+    md127: ios=0/0, merge=0/0, ticks=0/0, in_queue=0, util=0.00%, aggrios=1453/4376, aggrmerge=37152/187102, aggrticks=110316/76861, aggrin_queue=231234, aggrutil=57.58%
+  sdf: ios=1107/4359, merge=20510/199321, ticks=75435/91167, in_queue=210463, util=50.77%
+  sdd: ios=934/3601, merge=52453/179222, ticks=38873/48139, in_queue=122613, util=38.08%
+  sdb: ios=1494/4539, merge=31599/201099, ticks=81596/65459, in_queue=192659, util=49.58%
+  sdi: ios=1814/5131, merge=25846/194586, ticks=234133/120309, in_queue=403744, util=57.58%
+  sdg: ios=1300/4110, merge=41115/177818, ticks=83743/79622, in_queue=206442, util=50.03%
+  sde: ios=1319/4253, merge=41986/178171, ticks=66404/54792, in_queue=163166, util=46.15%
+  sdc: ios=2183/5110, merge=36886/194669, ticks=196165/76978, in_queue=322324, util=53.48%
+  sdh: ios=1478/3912, merge=46822/171937, ticks=106181/78424, in_queue=228464, util=50.55%

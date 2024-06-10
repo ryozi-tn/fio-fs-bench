@@ -1,0 +1,39 @@
+job: (g=0): rw=write, bs=(R) 512KiB-512KiB, (W) 512KiB-512KiB, (T) 512KiB-512KiB, ioengine=libaio, iodepth=4
+fio-3.35
+Starting 1 process
+
+job: (groupid=0, jobs=1): err= 0: pid=90949: Mon Jun 10 05:46:38 2024
+  write: IOPS=127, BW=63.7MiB/s (66.8MB/s)(10.0GiB/160854msec); 0 zone resets
+    slat (usec): min=32, max=75589, avg=119.88, stdev=1288.42
+    clat (usec): min=1864, max=273068, avg=31290.04, stdev=29006.45
+     lat (usec): min=1932, max=273164, avg=31409.92, stdev=29105.01
+    clat percentiles (msec):
+     |  1.00th=[    3],  5.00th=[    4], 10.00th=[    6], 20.00th=[    8],
+     | 30.00th=[   13], 40.00th=[   18], 50.00th=[   23], 60.00th=[   31],
+     | 70.00th=[   42], 80.00th=[   51], 90.00th=[   65], 95.00th=[   82],
+     | 99.00th=[  142], 99.50th=[  174], 99.90th=[  220], 99.95th=[  251],
+     | 99.99th=[  275]
+   bw (  KiB/s): min=25600, max=116736, per=100.00%, avg=65236.12, stdev=15020.65, samples=321
+   iops        : min=   50, max=  228, avg=127.38, stdev=29.34, samples=321
+  lat (msec)   : 2=0.02%, 4=5.01%, 10=20.47%, 20=19.87%, 50=34.02%
+  lat (msec)   : 100=17.73%, 250=2.82%, 500=0.05%
+  cpu          : usr=0.06%, sys=0.94%, ctx=10169, majf=0, minf=8
+  IO depths    : 1=0.1%, 2=0.1%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, >=64=0.0%
+     submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     complete  : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
+     issued rwts: total=0,20480,0,0 short=0,0,0,0 dropped=0,0,0,0
+     latency   : target=0, window=0, percentile=100.00%, depth=4
+
+Run status group 0 (all jobs):
+  WRITE: bw=63.7MiB/s (66.8MB/s), 63.7MiB/s-63.7MiB/s (66.8MB/s-66.8MB/s), io=10.0GiB (10.7GB), run=160854-160854msec
+
+Disk stats (read/write):
+    md127: ios=0/20621, merge=0/0, ticks=0/648419, in_queue=648419, util=98.98%, aggrios=5192/15957, aggrmerge=250340/601221, aggrticks=37217/68677, aggrin_queue=113605, aggrutil=38.68%
+  sdf: ios=5031/15866, merge=246379/599181, ticks=33800/70261, in_queue=111388, util=33.50%
+  sdd: ios=5119/16143, merge=252735/605435, ticks=32073/57814, in_queue=98625, util=30.44%
+  sdb: ios=5254/16089, merge=258004/601569, ticks=42683/69906, in_queue=121451, util=34.76%
+  sdi: ios=5146/16008, merge=248773/605446, ticks=39136/78434, in_queue=124490, util=34.94%
+  sdg: ios=5334/15824, merge=249074/597196, ticks=32140/67157, in_queue=106207, util=33.17%
+  sde: ios=5293/15947, merge=246886/603280, ticks=34200/57502, in_queue=98175, util=30.07%
+  sdc: ios=5245/15849, merge=254433/603359, ticks=39949/62813, in_queue=110408, util=33.83%
+  sdh: ios=5119/15937, merge=246437/594302, ticks=43758/85532, in_queue=138101, util=38.68%
